@@ -1,0 +1,12 @@
+/* pages/mine/about.wxss */
+.about-pic{
+  width: 90%;
+  margin: 25rpx auto 25rpx auto;
+}
+.about-pic image{
+  width: 100%;
+}
+.about-text{
+  width: 90%;
+  margin: 0 auto;
+}

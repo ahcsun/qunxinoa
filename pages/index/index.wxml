@@ -1,0 +1,126 @@
+<!--pages/index/index.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<!--左部推荐列表-->
+<scroll-view class='list-left' style='height:{{winHeight}}rpx;' scroll-y="true" scroll-top="{{scrollLeft}}">
+  <view wx:key="null" wx:for="{{List}}" data-index='{{index}}' class="list-text flex flex-y-center flex-x-center fon30r_white {{currentTab==item.num?'active':''}}" data-current="{{item.num}}" catchtap="swichNav">{{item.text}}</view>
+</scroll-view>
+<!--右部推荐分类-->
+<swiper class="classification" current="{{currentTab}}" duration="1" bindchange="switchTab" style="height:{{winHeight}}rpx;">
+  <!-- 信息中心 -->
+  <swiper-item catchtouchmove='catchTouchMove'>
+    <!-- 公告 -->
+    <view class='list-anno'>
+      <!-- 搜索 -->
+      <view class='list-search'>
+        <image src='../../images/search.png'></image>
+        <input placeholder='搜索' placeholder-style='text-align: left;'></input>
+      </view>
+      <view class='flex fon30r_white flex-y-center'>
+        <text catchtap='showList'>信息中心</text>
+        <text catchtap='btnCreate'>创建</text>
+      </view>
+    </view>
+    <!-- 消息列表 -->
+    <scroll-view bindscrolltolower="lower" scroll-y="true" class="scoll-h">
+      <view class='list-message' wx:key="null" wx:for="{{allstart}}"   data-index='{{index}}' catchtap='{{item.bind}}'>
+        <view class='fon30r_333'>{{item.subject}}</view>
+        <view class='fon28r_grak'><template is="wxParse" data="{{wxParseData:item['content'].nodes}}" /></view>
+        <view class='flex fon26r_grak'>
+          <view>{{item.opentime}}</view>
+          <view>
+            <text class='iconfont icon-view'> {{item.clickcount}} </text>
+            <!-- <text class='iconfont icon-news'> 0</text> -->
+          </view>
+        </view>
+      </view>
+      <loading hidden="{{loadingHidden}}">加载中...</loading>
+    </scroll-view>
+  </swiper-item>
+  <!-- 任务指派 -->
+  <swiper-item catchtouchmove='catchTouchMove'>
+    <scroll-view scroll-x="true" class="scoll-s">
+      <view class='list-anno task-search'>
+        <!-- 搜索 -->
+        <view class='list-search'>
+          <image src='../../images/search.png'></image>
+          <input data-id='{{search}}' bindblur='keyword' placeholder='搜索' placeholder-style='text-align: left;'></input>
+        </view>
+        <view class='flex flex-y-center fon30r_white'>
+          <text data-index='{{index}}' catchtap='stuCreate'>新建</text>
+        </view>
+      </view>
+      <!-- 已完成任务 -->
+      <view class='tast-end flex fon30r_white' catchtap='taskOver'>
+        <view>
+          <text class='iconfont icon-home '></text> 已完成任务</view>
+        <view>
+          <text class='iconfont  icon-arrow-right'></text>
+        </view>
+      </view>
+      <!-- 待办任务列表 -->
+      <view class='task-status fon28r_white' wx:key="null" wx:for="{{statusList}}">
+        <view>{{item.title}}</view>
+        <scroll-view class='task-list' scroll-y="true">
+          <view class='task-tree'>
+            <text>我指派的任务</text>
+            <view class='flex' wx:key="" data-index='{{index}}' catchtap='btnAssigned' wx:for="{{chargeData}}">
+              <image src='https://yangsheng.sjwke.com/{{user.avatar_big}}' />
+              <view>
+                <text>{{item.subject}}\n</text>
+                <text>{{item.description}}</text>
+              </view>
+            </view>
+          </view>
+
+          <view class='task-tree'>
+            <text>我负责的任务</text>
+            <view class='flex' wx:key="" data-index='{{index}}' catchtap='btnResponsible' wx:for="{{designeeData}}">
+              <image src='https://yangsheng.sjwke.com/{{user.avatar_big}}' />
+              <view>
+                <text>{{item.subject}}\n</text>
+                <text>{{item.description}}</text>
+              </view>
+            </view>
+          </view>
+
+          <view class='task-tree'>
+            <text>我参与的任务</text>
+            <view class='flex' data-index='{{index}}' wx:key="" catchtap='btnJoin' wx:for="{{participantData}}">
+              <image src='https://yangsheng.sjwke.com/{{user.avatar_big}}' />
+              <view>
+                <text>{{item.subject}}\n</text>
+                <text>{{item.description}}</text>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+        <!-- 我发起的 -->
+        <!-- <view>我发起的</view>
+        <scroll-view class='task-list' scroll-y="">
+           <view class='flex' wx:key="" wx:for="{{statusList}}">
+             {{item.text}}
+           </view>
+       </scroll-view> -->
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+<!--遮罩层-->
+<view class="zhezhao" catchtap='close' style="display:{{Show}};"></view>
+<view class='show_boxT' style='display:{{Show}};'>
+  <block wx:for="{{infoList}}" wx:key="null" wx:for-item="key">
+    <view class='list-title'>{{key.title}}</view>
+    <view class='flex' wx:key="null" data-index='{{index}}' wx:for="{{key.receive}}" catchtap='{{item.bind}}'>
+      <view>
+        <text class='iconfont {{item.ficon}}' space='emsp'> {{item.title}}</text>
+      </view>
+      <view class='fon30r_green'><image src='{{item.img}}' /></view>
+    </view>
+  </block>
+</view>
+<!-- <button catchtap='sjwke'>跳转外部网页</button> -->
+<!-- 底部模板 -->
+<view class='footer'>
+  <import src="/pages/footer/footer.wxml"></import>
+  <template is="footer"></template>
+</view>

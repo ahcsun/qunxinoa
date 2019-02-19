@@ -1,0 +1,36 @@
+<!--pages/index/details.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<!-- 通知 -->
+<view class='send' hidden='{{isShow != 1}}'>
+      <view class='cneter' wx:key="null"  bindtap='details' data-workerId='{{index}}' style='{{item.txtStyle}}'>
+        <view class='	subject'>
+          <text class="{{teit.label == true? 'label' : '' }}">{{teit.subject}}</text>
+          <text class='fon28r_9b'><text class='iconfont icon-view'></text>{{teit.readers.length}}</text>
+        </view>
+        <view class='content'>
+          <!-- <text space='nbsp'>{{teit.content}}</text> -->
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+        <view class='footerTime'>
+          <!-- <text>{{item.type}}</text> -->
+          <text>种子 {{teit.createtime}}</text>
+        </view>
+      </view>
+    </view>
+  <!-- 接收人 -->
+   <view class='details-person'>
+      <view class='fon34r_333'>接收人</view>
+      
+      <view>
+         <view>接收范围</view>
+         <view class='flex'>
+            <view class='fon24r_64'  wx:key="">
+              <text class='iconfont icon-home'></text><text space='emsp'>{{teit.departmentNames}}  </text><text class='iconfont icon-contact'></text><text>{{teit.uidNames}}</text>
+            </view>
+         </view>
+      </view>
+      <view>
+      <text>已读人数</text>
+      <view class='fon24r_64 ydrs'> <text wx:key='' wx:for="{{teitList}}">{{item.realname}}、</text> </view>
+      </view>
+   </view>

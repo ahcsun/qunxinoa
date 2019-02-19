@@ -1,0 +1,58 @@
+/* pages/index/create.wxss */
+.placeholder{
+  font-size:30rpx;
+  color:#75909f;
+}
+.create-title{
+  width: 90%;
+  height: 95rpx;
+  color: white;
+  padding-left: 20rpx;
+  border-radius:20rpx;
+  margin: 40rpx auto;
+  border:solid 2rpx #394550;
+}
+/* 中部消息 */
+textarea{
+  width: 90%;
+  height: 600rpx;
+  color: white;
+  padding: 20rpx;
+  margin: 0 auto 40rpx auto;
+  border-radius:20rpx;
+  border:solid 2rpx #394550;
+}
+/* 取消 下一步 */
+.btn{
+  width: 90%;
+  height: 95rpx;
+  margin: 0 auto;
+  border-radius: 50rpx;
+
+}
+.btn>button{
+  width: 50%;
+  height: 95rpx;
+  float: left;
+  font-size: 30rpx;
+  line-height: 95rpx;
+  color: #1f2831;
+	border: solid 2rpx #293c48;
+}
+.btn>button:nth-of-type(1){
+  border-radius: 50rpx 0 0 50rpx;
+  background: #5fc0af;
+  border-right: none;
+  color: white;
+}
+.btn>button:nth-of-type(2){
+  border-radius: 0 50rpx 50rpx 0;
+  background: #586d7b;
+  color: white;
+}
+.btn>button::after{
+  border:none;
+}
+.btn>button::before{
+  border:none;
+}

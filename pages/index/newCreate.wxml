@@ -1,0 +1,42 @@
+<!--pages/address/create.wxml-->
+<!-- 请写下要做的事 -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<input class='create-title' placeholder-class='placeholder' name="btnTitle" bindinput='btnTitle' placeholder='标题' value='{{Title}}'></input>
+  <view class='create-text'>
+     <textarea placeholder-class='placeholder' value='{{Text}}' name="btnText" bindinput='btnText' maxlength="400" placeholder='{{options.description}}' ></textarea>
+     <!-- <view><image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3019727267,3433736420&fm=26&gp=0.jpg' />
+     </view> -->
+  </view>
+  <!-- 负责人 -->
+   <view class='create-text'>
+    <view class='create-bg flex'>
+      <view catchtap='{{item.bind}}' class='create-model' wx:key="1" wx:for="{{modeList}}">
+         <image src='{{item.img}}' />
+         <view>{{item.name}}</view>
+      </view>
+    </view> 
+      <!-- <view class='flex placeholder flex-y-center'>
+         <view>负责人</view>
+      </view>  
+      <view class='flex placeholder flex-y-center'>
+         <view>参与者</view>
+      </view> -->
+   </view>
+   <!-- 截止日期 -->
+   <view class="create-section">
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2099-09-01" bindchange="bindDateChange">
+    <view class="picker placeholder">
+      开始日期: {{date}}
+    </view>
+  </picker>
+  <picker mode="date" value="{{dates}}" start="2015-09-01" end="2099-09-01" bindchange="bindDate">
+    <view class="picker placeholder">
+      截止日期: {{dates}}
+    </view>
+  </picker>
+</view>
+<!-- 保存 -->
+  <view class='btn'>
+    <button form-type='submit' >保存</button>
+  </view>
+  </form>

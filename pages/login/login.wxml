@@ -1,0 +1,9 @@
+<!--pages/login/login.wxml-->
+  <view class='login-Img'>
+    <image src='../../images/loginImg.png'></image>
+  </view>
+    <view class='login-Input'>
+      <input placeholder-class='fon30r_white' type='text'  placeholder='账号' bindblur='phone'></input>
+      <input placeholder-class='fon30r_white' type='password' placeholder='密码'  bindblur='pass'></input>
+      <button catchtap='Submit'>登 录</button>
+    </view>

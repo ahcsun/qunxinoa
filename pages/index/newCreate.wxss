@@ -1,0 +1,92 @@
+/* pages/address/create.wxss */
+.create-title{
+  width: 90%;
+  height: 95rpx;
+  color: white;
+  padding-left: 20rpx;
+  border-radius:20rpx;
+  margin: 40rpx auto;
+  border:solid 2rpx #394550;
+}
+.create-text{
+  width: 90%;
+  padding:20rpx 20rpx 0 20rpx;
+  margin:40rpx auto;
+  border-radius:20rpx;
+  border:solid 2rpx #394550;
+}
+.create-text textarea{
+  width: 100%;
+  height: 160rpx;
+  color: white;
+  margin-bottom: 20rpx;
+}
+.create-text image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.create-text>view:nth-of-type(2){
+  padding: 20rpx 0;
+  justify-content: space-between;
+}
+.create-text>view:nth-of-type(3){
+  padding: 20rpx 0;
+  justify-content: space-between;
+}
+.create-bg{
+  padding-bottom: 50rpx;
+  /* border-bottom: 2rpx solid #586d7b; */
+}
+.create-model{
+  width: 18%;
+  margin-right: 60rpx;
+}
+.create-model view{
+  text-align: center;
+  color: #75909f;
+}
+.create-model image{
+  width: 100%;
+  border-radius: 20rpx;
+  margin-bottom: 15rpx;
+}
+
+/* 截止日期 */
+.create-section{
+  width: 90%;
+  border-radius:20rpx;
+  margin: 0 auto;
+  padding:20rpx;
+  border:solid 2rpx #394550;
+}
+.create-section .picker{
+  margin: 10rpx auto 0 auto;
+}
+.create-section>picker:last-of-type{
+  margin-top: 30rpx;
+}
+.placeholder{
+  font-size:30rpx;
+  color:#75909f;
+}
+/* 底部保存 */
+.btn>button{
+  width: 90%;
+  height: 95rpx;
+  font-size: 30rpx;
+  line-height: 95rpx;
+  color: white;
+  margin: 40rpx auto 0 auto;
+	border: solid 2rpx #293c48;
+}
+.btn>button:nth-of-type(1){
+  border-radius: 20rpx;
+  background: #5fc0af;
+  border-right: none;
+}
+.btn>button::after{
+  border:none;
+}
+.btn>button::before{
+  border:none;
+}

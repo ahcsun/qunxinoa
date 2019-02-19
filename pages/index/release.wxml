@@ -1,0 +1,12 @@
+<!--pages/index/release.wxml-->
+<!-- 接收人 -->
+<view class='release-person'>
+ <text space='emsp'>接收人 {{options.sumname}}{{options.personid}}</text> 
+</view>
+<!-- 添加 -->
+<view data-index='{{index}}' catchtap='releaseAdd' class='release-add'>
+  <image src='/images/add.png' />
+  <view>添加</view>
+</view>
+<!-- 底部提交 -->
+   <button catchtap='btn'>提交</button>

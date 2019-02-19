@@ -1,0 +1,15 @@
+<!--pages/index/create.wxml-->
+<!-- 标题 -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<input class='create-title' placeholder-class='placeholder' name="btnTitle" bindblur='btnTitle' placeholder='标题'></input>
+<!-- 消息 -->
+<textarea placeholder-class='placeholder'name = "btnText" bindblur='btnText' maxlength="700" placeholder='有什么消息要通知大家' >
+  
+</textarea>
+  <view class='btn'>
+    <button  catchtap='btnRest'>保存草稿</button>
+    <button formType="submit">下一步</button>
+  </view>
+</form>
+  
+

@@ -1,0 +1,131 @@
+/* pages/index/details.wxss */
+@import "../../wxParse/wxParse.wxss";
+.cneter{
+  padding: 0 5%;
+  box-sizing: border-box;
+  width: 90%;
+  height: auto;
+  background: white;
+  margin: 40rpx auto;
+  border-radius: 10rpx;
+}
+.del{
+  width: 50%;
+  height: 218rpx;
+  position: absolute;
+  top:0rpx;
+  right: 0px;
+  z-index: -1;
+}
+.delete,.collection{
+  width: 50%;
+  height: 109px;
+  text-align: center;
+  float: left;
+}
+.delete>text,.collection>text{
+  display: block;
+  float: left;
+  width: 90%;
+  margin-top: 70rpx;
+  margin-left: 10rpx;
+  box-sizing: border-box;
+  padding: 20rpx 10rpx;
+  border: 1rpx solid #333;
+  font-size: 28rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.container{
+  position: relative;
+}
+.subject{
+  padding-top: 15rpx;
+  font-size: 26rpx;
+  display: -webkit-flex;
+  white-space:nowrap;
+  justify-content: space-between;
+}
+.subject>text:first-of-type{
+  display: inline-block;
+  color:#1f2831;
+  padding-top: 5rpx;
+  font-size: 32rpx;
+}
+.subject>text:nth-of-type(2){
+  float: right;
+}
+.subject>image{
+  width: 22rpx;
+  height: 28rpx;
+  float: right;
+  margin-top: 20rpx;
+}
+.status{
+  float: right;
+}
+.content{
+  width: 100%;
+  height: auto;
+  font-size: 30rpx;
+  color:#334353;
+  margin-top: 21rpx;
+}
+.content .wxParse-p{
+  padding: 0;
+}
+.footerTime{
+  font-size: 24rpx;
+  color:#333;
+  text-align: right;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 27rpx;
+}
+.footerTime>text{
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.footerTime>text:nth-of-type(2){
+  float: right;
+  line-height: 18px;
+}
+/* 接收人 */
+.details-person{
+  width: 90%;
+  margin:0 auto 30rpx auto;
+  border-radius:10rpx;
+  background: white;
+  padding: 4% 5%;
+}
+
+.details-person>view:nth-of-type(2){
+  margin: 30rpx auto;
+  padding: 20rpx 0;
+  border-top: 1rpx solid rgb(187, 184, 184);
+  border-bottom: 1rpx solid rgb(187, 184, 184);
+}
+.details-person view:nth-of-type(2) view{
+  align-items: center;
+  padding: 10rpx 0;
+  line-height:40rpx;
+}
+.details-person>view:nth-of-type(2) view[class='fon24r_64'] text:nth-child(odd){
+  margin-right:10rpx; 
+}
+.ydrs{
+  margin-top:14rpx;
+}
+image{
+  max-width: 609rpx;
+}
+
+/* 修改 */
+.wxParse-h2{
+  white-space: nowrap !important;
+}
+.wxParse-ul {
+  display: none;
+}

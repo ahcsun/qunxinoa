@@ -1,0 +1,46 @@
+<!--pages/index/taskdetail.wxml-->
+<view hidden='{{show}}' class='td-end fon30r_white'>任务已完成</view>
+<!-- 发起人员 -->
+<view class='create-text fon30r_main'>
+  <view class='create-bg'>
+    <view class='create-model flex' wx:key="1">
+      <image src='https://yangsheng.sjwke.com/{{List.data.designee.avatar_big}}' />
+      <view>
+        <text>{{List.data.designee.realname}}\n</text>
+        <text class='fon26r_grak'>{{List.data.assignment.st}}--{{List.data.assignment.et}}</text>
+      </view>
+    </view>
+  </view>
+  <view class=' placeholder flex-y-center'>
+    <view>{{List.data.assignment.description}}</view>
+  </view>
+</view>
+<!-- 人员信息 -->
+<view class='td-info fon30r_main'>
+  <view>成员一</view>
+  <view>
+    <view>
+      <text class='iconfont icon-home'></text>
+      <text space='emsp'>{{List.data.participant}}  </text>
+      <!-- <text class='iconfont icon-contact'></text><text>{{item.uidNames}}</text> -->
+    </view>
+  </view>
+</view>
+
+<!-- 任务动态 -->
+
+<view class='td-dynamic fon30r_main'>
+  <view>任务动态</view>
+  <scroll-view scroll-y="true">
+    <view class='flex' wx:key='' wx:for="{{Lists}}">
+      <text><text class='fon30r_green' space='emsp'>{{item.sourceInfo.source_user_info.realname}} </text>{{item.sourceInfo.source_content}}</text>
+      <text> {{item.ctime}}</text>
+    </view>
+  </scroll-view>
+  </view>
+
+  <!-- 编辑 完成 -->
+  <view class='td-footer flex' hidden='{{shows}}'>
+     <button catchtap='btnEditor'>编辑</button>
+     <button catchtap='btnEnd'>完成</button>
+  </view>

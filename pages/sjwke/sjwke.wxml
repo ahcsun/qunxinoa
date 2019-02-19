@@ -1,0 +1,4 @@
+<!--pages/sjwke/sjwke.wxml-->
+<import src="../../wxParse/wxParse.wxml"></import>
+<template is="wxParse" data="{{wxParseData:detail.nodes}}"></template>
+<web-view src="https://www.ahcsun.com"></web-view>

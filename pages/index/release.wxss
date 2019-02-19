@@ -1,0 +1,32 @@
+/* pages/index/release.wxss */
+.release-person{
+  width: 90%;
+  color:#75909f;
+  line-height: 60rpx;
+  border-radius:25rpx;
+  margin: 50rpx auto;
+  padding: 10rpx;
+  border:solid 1rpx #586d7b;
+}
+.release-add{
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 25rpx;
+  padding: 30rpx;
+  color:#75909f;
+  border:solid 1rpx #586d7b;
+}
+.release-add image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+button{
+  width: 90%;
+  height: 95rpx;
+  line-height: 95rpx;
+  background: #5fc0af;
+  margin-top:110rpx; 
+  color:white;
+  font-size: 32rpx;
+}

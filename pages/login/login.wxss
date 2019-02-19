@@ -1,0 +1,41 @@
+/* pages/login/login.wxss */
+.login-Img{
+	width: 282rpx;
+	height: 282rpx;
+  margin: 0 auto;
+  margin-top: 10%;
+  overflow: hidden;
+}
+.login-Img>image{
+	width: 282rpx;
+	height: 282rpx;
+}
+/* 中部表单 */
+.login-Input{
+	width: 430rpx;
+	height: 300rpx;
+  margin: 202rpx auto 0 auto;
+}
+.login-Input>input{
+  width: 430rpx;
+  height: 80rpx;
+	border: solid 2rpx #586d7b;
+  margin: 30rpx 0rpx;
+  border-radius: 50rpx;
+  padding-left: 50rpx;
+  color: white;
+}
+.login-Input>input:first-of-type{
+  margin-top: 0;
+}
+
+/* 底部登录按钮 */
+.login-Input>button{
+  width: 430rpx;
+  height: 80rpx;
+  font-size: 34rpx;
+  line-height: 80rpx;
+  background: #3aa794;
+  border-radius: 50rpx;
+  color:white;
+}

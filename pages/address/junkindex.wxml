@@ -1,0 +1,29 @@
+<!--pages/address/junkindex.wxml-->
+<view class="flexd box box-lr">
+  <scroll-view class="flexd groups box box-tb" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+    <block wx:key="null">
+      <view class="flexd">
+        <view class="group-name">部门
+        </view>
+        <view class="flexd group-users">
+
+          <view wx:key="null" wx:for="{{users}}" data-index='{{index}}' catchtap='{{item.bind}}'  class="user box box-lr">
+            <view  class="user-avatar box box-lr box-pack-center box-align-center">
+              <image class="user-avatar-img" src="/images/avatar.png"></image>
+            </view>
+            <view  class="flexd user-name">{{item.deptname}}</view>
+          </view>
+         
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+
+</view>
+
+<!-- 底部模板 -->
+<view class='footer'>
+  <import src="/pages/footer/footer.wxml"></import>
+  <template is="footer"></template>
+</view>

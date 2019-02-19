@@ -1,0 +1,57 @@
+/* pages/mine/information.wxss */
+/* 头像 */
+.info-nick{
+  width: 80%;
+  padding: 50rpx 0;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:solid 2rpx #394550;
+}
+.info-nick  image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 50rpx;
+}
+.info-nick view:nth-of-type(2) text{
+  color: white;
+}
+.info-list{
+  width: 80%;
+  height: 112rpx;
+  margin: 0 auto;
+  border-bottom:solid 2rpx #394550;
+}
+.info-list view:first-of-type{
+  flex: 1;
+}
+.info-list view:last-of-type{
+  flex: 2;
+}
+.info-list view text{
+  color: white;
+}
+/* 修改密码 退出登录 */
+.btn{
+  width: 80%;
+  margin: 100rpx auto;
+  justify-content: space-between;
+}
+.btn>button{
+	width: 281rpx;
+	height: 95rpx;
+  line-height: 95rpx;
+	border-radius: 20rpx;
+	border: solid 2rpx #586d7b;
+  background: none;
+  color:#5fc0af;
+  font-size: 30rpx;
+  margin: 0;
+}
+.btn>button::before{
+  border: none;
+}
+.btn>button::after{
+  border:none;
+}

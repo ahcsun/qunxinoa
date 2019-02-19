@@ -1,0 +1,122 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxfdd6c52c654ed530",
+	"projectname": "%E7%BE%A4%E4%BF%A1swke8",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": 1,
+					"name": "收件箱",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "创建",
+					"pathName": "pages/index/create",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "通讯录列表页面",
+					"pathName": "pages/address/address",
+					"query": "deptids=1&index=0&uid=2&btnTitle=werwr&btnText=rwerwr&deptid=&indexs=undefined&indexss=undefined"
+				},
+				{
+					"id": 4,
+					"name": "已完成任务列表",
+					"pathName": "pages/index/over",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "公告详情",
+					"pathName": "pages/index/details",
+					"query": "articleid=32"
+				},
+				{
+					"id": -1,
+					"name": "修改密码",
+					"pathName": "pages/mine/password",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发布",
+					"pathName": "pages/index/release",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人信息",
+					"pathName": "pages/mine/information",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "任务添加",
+					"pathName": "pages/index/newCreate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/mine/about",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "通讯录主页面",
+					"pathName": "pages/address/index",
+					"query": "articleid=32"
+				},
+				{
+					"id": 12,
+					"name": "任务详情",
+					"pathName": "pages/index/taskdetail",
+					"query": "uid=2&assignmentid=11"
+				},
+				{
+					"id": 13,
+					"name": "垃圾代码主页",
+					"pathName": "pages/address/junkindex",
+					"query": ""
+				}
+			]
+		}
+	}
+}

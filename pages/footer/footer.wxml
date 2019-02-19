@@ -1,0 +1,23 @@
+<!--pages/footer/footer.wxml-->
+<template name='footer'>
+  <view class='foot flex'>
+    <view class='msg'>
+      <navigator hover-class='none' url='/pages/index/index' open-type='reLaunch'>
+        <image src='/images/sjx.png'></image>
+        <text>收件箱</text>
+      </navigator>
+    </view>
+    <view class='address'>
+      <navigator hover-class='none' url='/pages/address/index'  open-type='reLaunch'>
+        <image src='/images/address.png'></image>
+        <text>通讯录</text>
+      </navigator>
+    </view>
+    <view class='my'>
+      <navigator hover-class='none' url='/pages/mine/mine' open-type='reLaunch'>
+        <image src='/images/my.png'></image>
+        <text>我的</text>
+      </navigator>
+    </view>
+  </view>
+</template>

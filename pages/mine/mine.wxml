@@ -1,0 +1,25 @@
+<!--pages/mine/mine.wxml-->
+  <view class='headimg'>
+    <image src='/images/my_infoBG.png'></image>
+    <view class='Info'>
+      <image src='{{imgurl}}'></image>
+      <text>{{user.realname}}</text>
+    </view>
+  </view>
+    <view class='box' catchtap='myinfo'>
+      <text>个人信息</text>
+      <image src='/images/iconRight.png'></image>
+    </view>
+    <view class='box' catchtap='collection'>
+      <text>关于我们</text>
+      <image src='/images/iconRight.png'></image>
+    </view>
+    <view class='box' catchtap='release'>
+      <text>安全</text>
+      <image src='/images/iconRight.png'></image>
+    </view>
+<view class='footer'>
+  <import src="/pages/footer/footer.wxml"></import>
+  <template is="footer"></template>
+</view>
+<import src="../footer/footer.wxml"/>

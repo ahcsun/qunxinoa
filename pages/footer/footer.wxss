@@ -1,0 +1,54 @@
+/* pages/footer/footer.wxss */
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background: #303d47;
+  border-radius: 50rpx 50rpx 0 0;
+}
+.msg,.address,.my{
+  flex: 1;
+  height: 100rpx;
+  float: left;
+  text-align: center;
+}
+.msg>navigator>image,.my>navigator>image,.address>navigator>image{
+  width: 50rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15rpx;
+}
+.my>navigator>image{
+  width: 36rpx;
+  height: 40rpx;
+}
+.msg>navigator>text,.my>navigator>text,.address>navigator>text{
+  font-size:30rpx;
+  color:#5fc0af;
+  display: block;
+  text-align: center;
+}
+/* .push{
+  position: absolute;
+  top:-50rpx;
+  width: 104rpx;
+  height: 104rpx;
+  background: #1f2831;
+  text-align: center;
+  left: 45%;
+  border-radius: 50%;
+}
+.imgess{
+  width: 70rpx;
+  height: 70rpx;
+  background: #5fc0af;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 15rpx;
+}
+.imgess>image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-top: 17.5rpx;
+} */

@@ -1,0 +1,41 @@
+<!--pages/address/index.wxml-->
+<view class="flexd box box-lr">
+  <scroll-view class="flexd groups box box-tb" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+    <block wx:key="null">
+      <view class="flexd">
+        <view class="group-name">部门
+        </view>
+        <view class="flexd group-users">
+
+          <view wx:key="null" wx:for="{{users}}" data-index='{{index}}' catchtap='{{item.bind}}'  class="user box box-lr">
+                          <!-- wx:if 是否选择显示不同图标 -->
+    <icon hidden='{{settlement}}' class='cart-pro-select' wx:if="{{item.selected}}" type="success" color="#5fc0af"  catchtap="selectList" data-index="{{index}}" />
+    <icon hidden='{{settlement}}' class='cart-pro-select' wx:else type="circle" catchtap="selectList" data-index="{{index}}" />
+            <view  class="user-avatar box box-lr box-pack-center box-align-center">
+              <image class="user-avatar-img" src="/images/avatar.png"></image>
+            </view>
+            <view  class="flexd user-name">{{item.deptname}}</view>
+          </view>
+         
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!--底部结算-->
+<view class='settlement' hidden='{{settlement}}'>
+  <!-- wx:if 是否全选显示不同图标 -->
+  <icon class='total-select' wx:if="{{selectAllStatus}}" type="success" color="#5fc0af" bindtap="selectAll" />
+  <icon class='total-select' wx:else type="circle" color="#b2b2b2" bindtap="selectAll" />
+  <!-- 总价 -->
+  <text class='fon34r_333'>全选</text>
+  <button class='fon34r_white' catchtap='handle'>提交</button>
+</view>
+
+</view>
+
+<!-- 底部模板 -->
+<view class='footer'>
+  <import src="/pages/footer/footer.wxml"></import>
+  <template is="footer"></template>
+</view>

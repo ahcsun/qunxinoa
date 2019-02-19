@@ -1,0 +1,25 @@
+<!--pages/index/over.wxml-->
+<view class="over-section">
+  <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}"> </picker> -->
+  <view class="picker">
+      {{array[index]}}
+    </view>
+  <!-- 没有更多已完成任务了 -->
+   <view hidden='false'  class="noproducttips">
+            <image mode="widthFix" src="../../images/blank_03.png" style="height: 146.618px;"></image>
+            <text>没有更多已完成任务了</text>
+   </view>
+</view>
+  <!-- 已完成任务列表 -->
+   <view class='over-text fon30r_main' data-index='{{index}}' catchtap='{{item.stamp}}' wx:key="" wx:for="{{datas}}">
+    <view class='over-bg'>
+      <view class='over-model flex' wx:key="1">
+         <image src='/images/avatar.png' />
+         <view><text>{{item.subject}}\n</text><text>{{item.finishtime}}{{item.stamp}}</text></view>
+      </view>
+    </view> 
+      <view class=' placeholder flex-y-center'>
+         <view>{{item.description}}</view>
+      </view>  
+   </view>
+

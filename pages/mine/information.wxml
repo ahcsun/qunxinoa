@@ -1,0 +1,69 @@
+<!--pages/mine/information.wxml-->
+<!-- 头像 -->
+<form bindsubmit="formSubmit">
+  <view class='info-nick fon34r_qunxin flex' catchtap='picUpload'>
+    <view>头像</view>
+    <view class='flex flex-y-center'>
+      <image src='{{tempFilePaths}}' />
+      <text class='iconfont icon-arrow-right'></text>
+    </view>
+  </view>
+  <!-- 用户名 -->
+  <view class='info-list flex flex-y-center fon34r_qunxin flex'>
+    <view class='flex flex-y-center'>用户名</view>
+    <view class='flex'>
+      <input bindblur='userInfo'  placeholder='{{username}}' placeholder-style='color:#75909f'></input>
+    </view>
+  </view>
+   <!-- 部门 -->
+  <view class='info-list flex flex-y-center fon34r_qunxin flex'>
+    <view class='flex flex-y-center'>部门</view>
+    <view class='flex'>
+      <input bindblur='userInfo' placeholder='{{deptname}}' placeholder-style='color:#75909f'></input>
+    </view>
+  </view>
+     <!-- 职位 -->
+  <view class='info-list flex flex-y-center fon34r_qunxin flex'>
+    <view class='flex flex-y-center'>职位</view>
+    <view class='flex'>
+      <input bindblur='userInfo' placeholder='{{posname}}' placeholder-style='color:#75909f'></input>
+    </view>
+  </view>
+  <!-- 性别 -->
+  <view class='info-list flex flex-y-center fon34r_qunxin flex'>
+    <view class='flex flex-y-center'>性别</view>
+    <view class='flex'>
+      <view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">{{array[gender]}}</picker>
+      </view>
+      <text class='iconfont icon-arrow-right'></text>
+    </view>
+  </view>
+  <!-- 微信 -->
+  <view class='info-list flex flex-y-center fon34r_qunxin flex'>
+    <view class='flex flex-y-center'>微信</view>
+    <view class='flex'>
+      <input bindblur='wxInfo' placeholder='{{weixin}}' placeholder-style='color:#75909f'></input>
+    </view>
+  </view>
+  <!-- 邮箱 -->
+  <view class='info-list flex flex-y-center fon34r_qunxin flex'>
+    <view class='flex flex-y-center'>邮箱</view>
+    <view class='flex'>
+      <input bindblur='yxInfo' placeholder='{{email}}' placeholder-style='color:#75909f'></input>
+    </view>
+  </view>
+  <!-- 手机 -->
+  <view class='info-list flex flex-y-center fon34r_qunxin flex'>
+    <view class='flex flex-y-center'>手机</view>
+    <view class='flex'>
+      <input bindblur='sjInfo' placeholder='{{mobile}}' placeholder-style='color:#75909f'></input>
+    </view>
+  </view>
+
+  <!-- 修改密码 退出登录 -->
+  <view class='btn flex'>
+    <button bindtap='Logout' catchtap='loadExit'>退出登录</button>
+    <button form-type="submit">保存</button>
+  </view>
+</form>

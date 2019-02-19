@@ -1,0 +1,10 @@
+<!--pages/mine/about.wxml-->
+<!-- 展示图片 -->
+<view class='about-pic'>
+  <image mode='widthFix' src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1987380327,2328023303&fm=200&gp=0.jpg' />
+</view>
+
+<!-- 介绍文字 -->
+ <view class='about-text fon28r_white'>
+   微博知名互联网帐号，更是设计行业最具影响力的美学博主。同时微信公众号（优秀网页设计）关注数也累计达50万。优设新媒体常常作为行业意见领袖被各大互联网公司邀请发表和推广业内热点及新品发布会本着线上线下活动双管齐下的原则，优设仅线上公开
+ </view>

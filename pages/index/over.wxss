@@ -1,0 +1,68 @@
+/* pages/index/over.wxss */
+page{
+  padding-top: 100rpx;
+}
+.over-section{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 30rpx;
+  text-align: center;
+  color: white;
+  background: #5fc0af;
+}
+/* 发起人员 */
+.over-text{
+  width: 90%;
+  padding: 0 20rpx;
+  margin:40rpx auto;
+  border-radius:20rpx;
+  border:solid 2rpx #394550;
+}
+.over-text textarea{
+  width: 100%;
+  height: 160rpx;
+  color: white;
+  margin-bottom: 20rpx;
+}
+.over-text image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.over-text>view:nth-of-type(2){
+  padding: 20rpx 0;
+}
+.over-bg{
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #586d7b;
+}
+.over-model image{
+  width: 120rpx;
+  border-radius: 20rpx;
+  margin-right: 40rpx;
+
+}
+.over-model view{
+  line-height: 50rpx;
+}
+/* 没有更多已完成任务了 */
+.noproducttips {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 300rpx;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+.noproducttips image {
+    width: 100%;
+}
+
+.noproducttips text {
+    font-size: 26rpx;
+    color: white;
+}

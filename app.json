@@ -1,0 +1,30 @@
+{
+    "pages": [
+      "pages/login/login",
+      "pages/index/index",
+      "pages/index/create",
+      "pages/index/newCreate",
+      "pages/index/over",
+      "pages/index/details",
+      "pages/index/release",
+      "pages/index/taskdetail",
+      "pages/address/address",
+      "pages/address/index",
+      "pages/address/junkindex",
+      "pages/address/junkcode",
+      "pages/mine/mine",
+      "pages/mine/about",
+      "pages/mine/information",
+      "pages/mine/password",
+      "pages/footer/footer",
+      "pages/sjwke/sjwke"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "群信",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#EFEFF4"
+    },
+    "debug": false
+}
